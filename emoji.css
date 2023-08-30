@@ -1,0 +1,44 @@
+body{
+    background: black;
+    animation-name: beat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#heart { 
+    position: relative; 
+    width: 100px; 
+    height: 90px;
+    margin-left: 500px; 
+    margin-top: 200px;
+} 
+
+#heart:before, #heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 50px; 
+    top: 0; 
+    width: 50px; 
+    height: 80px; 
+    background: red; 
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+#heart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
+@keyframes beat {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(0.8);
+        background-color: green;
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
